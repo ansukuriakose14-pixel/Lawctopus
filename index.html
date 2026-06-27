@@ -6,8 +6,8 @@
 <title>Mastering Contract Drafting & Freelancing | Lawctopus Law School</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link href="style.css" rel="stylesheet"/>
-
 </head>
 <body>
 
@@ -22,8 +22,23 @@
       <a href="#pricing" class="nav-link-item">Pricing</a>
       <a class="btn-nav" href="https://www.lawctopuslawschool.com/courses/cdn6-months/">Enroll Now</a>
     </div>
+    <!-- Hamburger toggle (mobile only) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
 </header>
+
+<!-- Mobile full-screen menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <a href="#curriculum" class="mobile-link">Curriculum</a>
+  <a href="#faculty" class="mobile-link">Faculty</a>
+  <a href="#freelancing" class="mobile-link">Freelancing</a>
+  <a href="#pricing" class="mobile-link">Pricing</a>
+  <a class="btn-nav" href="https://www.lawctopuslawschool.com/courses/cdn6-months/">Enroll Now</a>
+</div>
 
 <main>
 
@@ -71,7 +86,6 @@
 
       <!-- RIGHT: Visual -->
       <div class="hero-visual">
-        <!-- Floating rating card -->
         <div class="float-card float-card-rating">
           <div class="stars">★★★★★</div>
           <div>
@@ -80,7 +94,6 @@
           </div>
         </div>
 
-        <!-- Main image card -->
         <div class="main-card">
           <img src="images/2.png" alt="Live Legal Session"/>
           <div class="main-card-overlay"></div>
@@ -98,14 +111,12 @@
           </div>
         </div>
 
-        <!-- Floating earn card -->
         <div class="float-card float-card-earn">
           <div class="earn-num">₹35k<span style="font-size:1.1rem; color:var(--gold-deep)">+</span></div>
           <div class="earn-lbl">Monthly Freelance Avg.</div>
           <div class="earn-bar-wrap"><div class="earn-bar"></div></div>
         </div>
 
-        <!-- Floating students card -->
         <div class="float-card float-card-students">
           <div class="avatar-stack">
             <img class="avatar" src="images/3.png" alt=""/>
@@ -156,7 +167,6 @@
       <p class="sec-sub">Learn from India's top legal practitioners. Build a portfolio that commands global rates.</p>
     </div>
     <div class="features-grid reveal">
-      <!-- Visual card 1 -->
       <div class="feature-card feature-card-visual delay-1">
         <img src="images/6.png" alt="Live Sessions"/>
         <div class="feature-card-visual-body">
@@ -165,8 +175,6 @@
           <p>Engage directly with practitioners in real-time drafting clinics, negotiation tables, and Q&amp;A deep-dives.</p>
         </div>
       </div>
-
-      <!-- Visual card 2 -->
       <div class="feature-card feature-card-visual delay-2">
         <img src="images/7.png" alt="Freelancing"/>
         <div class="feature-card-visual-body">
@@ -175,8 +183,6 @@
           <p>Dedicated Upwork &amp; Fiverr training to help you land your first international client and hit ₹35k/month.</p>
         </div>
       </div>
-
-      <!-- Small cards -->
       <div class="feature-card delay-1">
         <div class="f-icon"><span class="material-symbols-outlined">description</span></div>
         <h3>24+ Complex Drafts</h3>
@@ -357,7 +363,6 @@
 <section class="sec freelance-bg" id="freelancing">
   <div class="container">
     <div class="freelance-layout">
-      <!-- Image collage -->
       <div class="freelance-images reveal">
         <div class="fi-main">
           <img src="images/16.png" alt="Freelance legal work"/>
@@ -370,8 +375,6 @@
           Avg. 3 clients in 6 months
         </div>
       </div>
-
-      <!-- Content -->
       <div class="freelance-content reveal delay-2">
         <span class="eyebrow">Career Launch</span>
         <h2 class="sec-title" style="text-align:left;">Turn Your Legal Skills Into a Global Income</h2>
@@ -422,7 +425,6 @@
   </div>
   <div class="testi-track-wrap">
     <div class="testi-track" id="testiTrack">
-      <!-- Cards duplicated for seamless loop -->
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">"The course completely changed how I approach contracts. Within 3 months of finishing, I landed my first Upwork client from the US and now earn more freelancing than I did at my firm."</p>
@@ -471,7 +473,7 @@
           <div><div class="testi-name">Vikram Joshi</div><div class="testi-role">Remote Legal Counsel, Hyderabad</div></div>
         </div>
       </div>
-      <!-- Duplicate for seamless scroll -->
+      <!-- Duplicate set for seamless loop -->
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">"The course completely changed how I approach contracts. Within 3 months of finishing, I landed my first Upwork client from the US and now earn more freelancing than I did at my firm."</p>
@@ -648,7 +650,7 @@
     </div>
   </div>
 </footer>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
- <script src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
