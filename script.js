@@ -37,21 +37,34 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 }
 
 // ── Tilt on feature cards (subtle)
-document.querySelectorAll('.feature-card, .timeline-card, .faculty-card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `perspective(800px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-6px)`;
+if (window.innerWidth > 768 && !('ontouchstart' in window)) {
+
+  document.querySelectorAll('.feature-card, .timeline-card, .faculty-card').forEach(card => {
+
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      card.style.transform =
+        `perspective(800px)
+        rotateY(${x * 6}deg)
+        rotateX(${-y * 6}deg)
+        translateY(-6px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = "";
+      card.style.transition = "transform .5s ease";
+    });
+
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = "transform .1s ease";
+    });
+
   });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-    card.style.transition = 'transform 0.5s ease';
-  });
-  card.addEventListener('mouseenter', () => {
-    card.style.transition = 'transform 0.1s ease';
-  });
-});
+
+}
 
 // ── Pause testimonial marquee on hover
 const track = document.getElementById('testiTrack');

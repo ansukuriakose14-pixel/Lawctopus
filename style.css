@@ -684,3 +684,213 @@ footer { background: #0a0806; color: #fff; padding: 72px 0 0; }
 }
 
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+
+  .container{
+    padding:0 20px;
+  }
+
+  .hero-inner,
+  .freelance-layout{
+    grid-template-columns:1fr;
+    gap:50px;
+    text-align:center;
+  }
+
+  .hero-text,
+  .freelance-content{
+    order:1;
+  }
+
+  .hero-visual,
+  .freelance-images{
+    order:2;
+    margin:auto;
+    max-width:650px;
+  }
+
+  .features-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .feature-card-visual{
+    grid-column:span 2;
+  }
+
+  .timeline-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .faculty-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stats-bar-inner{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+
+/* Tablets */
+@media (max-width:768px){
+
+  html{
+    font-size:15px;
+  }
+
+  header{
+    width:100%;
+    left:0;
+    top:0;
+    transform:none;
+    border-radius:0;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+    padding:15px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:120px 0 70px;
+  }
+
+  .hero-title{
+    font-size:2.6rem;
+  }
+
+  .hero-sub{
+    max-width:100%;
+  }
+
+  .hero-ctas{
+    justify-content:center;
+  }
+
+  .trust-strip{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .features-grid,
+  .timeline-grid,
+  .faculty-grid,
+  .stats-bar-inner{
+    grid-template-columns:1fr;
+  }
+
+  .feature-card-visual{
+    grid-column:auto;
+  }
+
+  .float-card{
+    position:relative;
+    top:auto;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    margin:15px auto;
+    transform:none !important;
+  }
+
+  .freelance-images{
+    height:auto;
+  }
+
+  .fi-main,
+  .fi-accent{
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:auto;
+  }
+
+  .fi-accent{
+    margin-top:20px;
+  }
+
+  .fi-pill{
+    position:relative;
+    top:auto;
+    right:auto;
+    margin:20px auto;
+    width:fit-content;
+  }
+
+  .testi-card{
+    width:320px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width:576px){
+
+  .container{
+    padding:0 16px;
+  }
+
+  .hero-title{
+    font-size:2rem;
+    line-height:1.2;
+  }
+
+  .hero-sub{
+    font-size:0.95rem;
+  }
+
+  .btn-primary,
+  .btn-ghost{
+    width:100%;
+    justify-content:center;
+  }
+
+  .stat-item{
+    padding:25px 15px;
+  }
+
+  .stat-num{
+    font-size:2rem;
+  }
+
+  .sec{
+    padding:70px 0;
+  }
+
+  .sec-title{
+    font-size:1.8rem;
+  }
+
+  .feature-card,
+  .timeline-card-body{
+    padding:22px;
+  }
+
+  .faculty-card{
+    aspect-ratio:1/1.25;
+  }
+
+  .testi-card{
+    width:280px;
+  }
+
+  img{
+    max-width:100%;
+    height:auto;
+  }
+}
